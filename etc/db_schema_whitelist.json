@@ -1,0 +1,23 @@
+{
+    "b2b_postcode_list": {
+        "column": {
+            "postcode_id": true,
+            "pcode": true,
+            "locality": true,
+            "state": true,
+            "comments": true,
+            "category": true
+        },
+        "index": {
+            "B2B_POSTCODE_LIST_PCODE": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "quote": {
+        "column": {
+            "deliveryfee": true
+        }
+    }
+}

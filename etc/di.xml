@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="B2b\EdiFee\Api\PostcodeRepositoryInterface" type="B2b\EdiFee\Model\PostcodeRepository"/>
+	<preference for="B2b\EdiFee\Api\Data\PostcodeInterface" type="B2b\EdiFee\Model\Data\Postcode"/>
+	<preference for="B2b\EdiFee\Api\Data\PostcodeSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+</config>

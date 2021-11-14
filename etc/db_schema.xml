@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="b2b_postcode_list" resource="default" engine="innodb" comment="Postcode list Table">
+        <column xsi:type="int" name="postcode_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Postcode list ID"/>
+        <column xsi:type="varchar" name="pcode" nullable="false" length="10" comment="Post code"/>
+        <column xsi:type="varchar" name="locality" nullable="false" length="50" comment="City Name"/>
+        <column xsi:type="varchar" name="state" nullable="false" length="5" comment="State code"/>
+        <column xsi:type="varchar" name="comments" nullable="true" length="40" comment="Comments"/>
+        <column xsi:type="varchar" name="category" nullable="true" length="30" comment="Category Name"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="postcode_id"/>
+        </constraint>
+        <index referenceId="POSTCODE_LIST_PCODE" indexType="btree">
+            <column name="pcode"/>
+        </index>
+    </table>
+    <table name="quote" resource="checkout" engine="innodb" comment="Sales Flat Quote">
+        <column xsi:type="decimal" name="deliveryfee" scale="4" precision="20" unsigned="false" nullable="false"
+                default="0" comment="Delivery Fee"/>
+    </table>
+</schema>
